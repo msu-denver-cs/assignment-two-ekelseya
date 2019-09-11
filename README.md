@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Assignment 1
 
-Things you may want to cover:
+>A car part belongs to one factory, though there can be many of each part. For each part, keep track of the name and
+the number of parts that are available. For this assignment, we won't be adding or subtracting from the number of parts
+available.
+A factory has a location and has many parts.
+Cars have make and model names, VIN numbers, and have many parts through a factory.
+In the form for a car, have a drop-down with a list of possible parts to be added.
 
-* Ruby version
+---
 
-* System dependencies
+* Ruby version: 2.5.5
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Rails version 5.2.3
