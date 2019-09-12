@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <h1>Eryn's Ugly Car Parts</h1>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+    <p>Welcome to Eryn's Ugly Car Parts!</p>
+    <p>Here you will find only the finest parts for the ugliest cars and the ugliest parts for the finest cars.</p>
+    <br>
+    <%= image_tag("uglycar.jpg", :alt => "Orange car by Christopher Ziemnowicz", :size => '260x180') %>
+    <br>
+    <br>
+    <%= link_to '<button type = "button">Find Factories</button>'.html_safe, new_factory_path %>
+    <%= link_to '<button type = "button">Find Ugly Cars</button>'.html_safe, new_car_path %>
+    <%= link_to '<button type = "button">Find Ugly Parts</button>'.html_safe, new_part_path %>
+
+</body>
+
+</html>
