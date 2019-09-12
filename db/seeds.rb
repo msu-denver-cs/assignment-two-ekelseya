@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+Factory.create([{name: 'Joe\'s', location: 'France'}, {name: 'Betty\'s', location: 'Idaho'}])
+
