@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <h1>Eryn's Ugly Car Parts</h1>
+  <title>Eryn's Ugly Car Parts</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <!–– TODO: No idea if below is needed. ––>
+  <!-- TODO: No idea if below is needed. -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
@@ -18,9 +18,9 @@
     <%= image_tag("uglycar.jpg", :alt => "Orange car by Christopher Ziemnowicz", :size => '260x180') %>
     <br>
     <br>
-    <%= link_to '<button type = "button">Find Factories</button>'.html_safe, new_factory_path %>
-    <%= link_to '<button type = "button">Find Ugly Cars</button>'.html_safe, new_car_path %>
-    <%= link_to '<button type = "button">Find Ugly Parts</button>'.html_safe, new_part_path %>
+    <%= link_to '<button type = "button">Show Factories</button>'.html_safe, factory_path %>
+    <%= link_to '<button type = "button">Show Ugly Cars</button>'.html_safe, car_path %>
+    <%= link_to '<button type = "button">Show Ugly Parts</button>'.html_safe, parts_path %>
 
 </body>
 
