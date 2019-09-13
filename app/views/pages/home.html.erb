@@ -12,15 +12,15 @@
 
 <body>
 
-    <p>Welcome to Eryn's Ugly Car Parts!</p>
+    <h1>Welcome to Eryn's Ugly Car Parts!</h1>
     <p>Here you will find only the finest parts for the ugliest cars and the ugliest parts for the finest cars.</p>
     <br>
     <%= image_tag("uglycar.jpg", :alt => "Orange car by Christopher Ziemnowicz", :size => '260x180') %>
     <br>
     <br>
-    <%= link_to '<button type = "button">Show Factories</button>'.html_safe, factory_path %>
-    <%= link_to '<button type = "button">Show Ugly Cars</button>'.html_safe, car_path %>
-    <%= link_to '<button type = "button">Show Ugly Parts</button>'.html_safe, parts_path %>
+    <%= link_to '<button type = "button">Show Factories</button>'.html_safe, new_factory_path %>
+    <%= link_to '<button type = "button">Show Ugly Cars</button>'.html_safe, new_car_path %>
+    <%= link_to '<button type = "button">Show Ugly Parts</button>'.html_safe, new_part_path %>
 
 </body>
 
