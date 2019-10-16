@@ -1,0 +1,41 @@
+<%= form_with(model: part, local: true) do |form| %>
+  <% if part.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(part.errors.count, "error") %> prohibited this part from being saved:</h2>
+
+      <ul>
+      <% part.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :factory_id %>
+    <%= form.collection_select :factory_id, Factory.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"This part fancifies that ugly:" %><br>
+    <%= form.collection_check_boxes(:car_ids, Car.all, :id, :make) do |b| %>
+      <%= b.label class: "custom-label" do %>
+        <%= b.check_box + b.object.make + " " + b.object.model %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
