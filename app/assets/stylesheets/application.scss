@@ -17,6 +17,15 @@
 
 body { padding-top: 70px; }
 
+table  {
+  padding-top: 50px;
+  border-collapse: separate!important;
+}
+
+td {
+  padding: 10px;
+}
+
 .custom-checkbox {
     position: relative;
 }
