@@ -7,4 +7,5 @@ class Part < ActiveRecord::Base
   validates :name, presence: true
   validates :quantity, presence: true
   validates :factory_id, presence: true
+
 end
