@@ -1,5 +1,16 @@
-<h3>Search Result</h3>
+<h2>Search Result</h2>
 
-<% @results.each do |result| %>
-  <%= link_to result.vin + " " + result.make + " " + result.model, result %><br>
+<h3>Cars</h3>
+<% @result_cars.each do |result_car| %>
+  <%= link_to result_car.vin + " " + result_car.make + " " + result_car.model, result_car %><br>
+<% end %>
+
+<h3>Parts</h3>
+<% @result_parts.each do |result_part| %>
+  <%= link_to result_part.name, result_part %><br>
+<% end %>
+
+<h3>Factories</h3>
+<% @result_factories.each do |result_factory| %>
+  <%= link_to result_factory.name + ", " + result_factory.location, result_factory %><br>
 <% end %>
