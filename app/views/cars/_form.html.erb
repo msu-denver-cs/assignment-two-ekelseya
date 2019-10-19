@@ -29,13 +29,13 @@
   <div class="field">
     <%= form.label :"Parts available for that ugly car:" %><br>
     <%= form.collection_check_boxes(:part_ids, Part.all, :id, :name) do |b| %>
-      <%= b.label class: "custom-label" do %>
+      <%= b.label class:"checkbox" do %>
         <%= b.check_box + b.text %>
       <% end %>
     <% end %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-success' %>
   </div>
 <% end %>

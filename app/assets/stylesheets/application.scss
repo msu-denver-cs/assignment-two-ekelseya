@@ -26,36 +26,8 @@ td {
   padding: 10px;
 }
 
-.custom-checkbox {
-    position: relative;
-}
-.checkbox {
-    position: absolute;
-    opacity: 0;
-}
-.custom-label {
-    display: inline-block;
-    padding: 14px 30px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    font-size: 15px;
-    font-family: sans-serif;
-    cursor: pointer;
-}
-.checkbox:checked ~ .custom-label {
-    color: white;
-    border: 5px solid black;
-    border-radius: 10px;
-    background-color: #00CBA2;
-}
-.clickLabel{
-    background-color: white;
-    border: 2px solid black;
-    color: black;
-    padding: 5px 10px;
-    text-align: center;
-    display: inline-block;
-    font-size: 15px;
-    margin: 10px 10px;
-    cursor: pointer;
-}
+.field { padding: 3px; }
+
+.actions { padding: 3px; }
+
+.checkbox {padding: 3px; }
