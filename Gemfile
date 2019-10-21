@@ -60,3 +60,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # SimpleCov for code coverage analysis
 gem 'simplecov', require: false, group: :test
+
+# Autocomplete search
+gem 'autocomplete_rails'
+gem 'jquery-ui-rails'

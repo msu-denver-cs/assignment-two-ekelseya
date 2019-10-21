@@ -2,7 +2,12 @@
 
 Rails.application.routes.draw do
   resources :car_parts
-  resources :cars
+  resources :cars do
+    get :autocomplete_car_make, on: :collection
+    collection do
+      get 'search'
+    end
+  end
   resources :parts
   resources :factories
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
