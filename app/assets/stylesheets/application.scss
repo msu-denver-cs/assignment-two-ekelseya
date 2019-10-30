@@ -25,7 +25,7 @@ $bgHighlight : #DAE1F1;
 $colDefault  : #59665D;
 $colHighlight: #eda63a;
 
-.navbar-fixed-top {
+.navbar-static-top {
   background-color: $bgDefault;
   border-color: $bgHighlight;
   .navbar-brand {
@@ -73,7 +73,13 @@ $colHighlight: #eda63a;
         background-color: $bgHighlight; }}}
 }
 
-body { padding-top: 120px; }
+body { padding-top: 0; }
+
+.btn {
+  background-color: #59665D;
+  border: none;
+  color: white;
+}
 
 table  {
   padding-top: 50px;
