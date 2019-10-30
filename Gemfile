@@ -64,3 +64,6 @@ gem 'simplecov', require: false, group: :test
 # Autocomplete search
 gem 'autocomplete_rails'
 gem 'jquery-ui-rails'
+
+# Adding Authentication
+gem 'devise'
