@@ -1,0 +1,28 @@
+
+<p>
+  <strong>Make:</strong>
+  <%= @car.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @car.model %>
+</p>
+
+<p>
+  <strong>Vin:</strong>
+  <%= @car.vin %>
+</p>
+
+<p>
+  <strong>Fancify your ugly <%= @car.model %> with: </strong>
+</p>
+<ul>
+  <% @car.parts.each do |part| %>
+  <li><%=part.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_car_path(@car), :class => "button btn btn-warning"  %>
+<%= link_to 'Back', cars_path, :class => "button btn btn-success"  %>
+<%= link_to 'Home', root_path, :class => "button btn btn-info"  %>
