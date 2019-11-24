@@ -66,4 +66,5 @@ gem 'autocomplete_rails'
 gem 'jquery-ui-rails'
 
 # Adding Authentication
-gem 'devise'
+# gem 'devise'
+# Commented out for SPA 

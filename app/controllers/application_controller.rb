@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
-  skip_before_action :authenticate_user!, only: [:show, :index]
-
+#  before_action :authenticate_user!
+#  skip_before_action :authenticate_user!, only: [:show, :index]
+# devise authentication commented out for SPA
 end

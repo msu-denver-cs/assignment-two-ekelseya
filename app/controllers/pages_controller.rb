@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!
+#  skip_before_action :authenticate_user!
+# Commented out devise authentication for SPA
 
   autocomplete :car, :make, full_search: true
   autocomplete :car, :model, full_search: true
