@@ -67,4 +67,7 @@ gem 'jquery-ui-rails'
 
 # Adding Authentication
 # gem 'devise'
-# Commented out for SPA 
+# Commented out for SPA
+
+# Rack-cors is Rack middleware for handling Cross-Origin Resource Sharing
+gem 'rack-cors', require: 'rack/cors'

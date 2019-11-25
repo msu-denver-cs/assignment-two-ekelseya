@@ -14,6 +14,43 @@
     <%= image_tag("uglycar.jpg", :alt => "Orange car by Christopher Ziemnowicz", :size => '260x180') %>
     <br>
     <br>
+    <button onclick="fetch('cars', ['make', 'model'])">Cars</button>
+    <button onclick="fetch('factories', ['name', 'location'])">Factories</button>
+    <button onclick="fetch('parts', ['name', 'quantity'])">Parts</button>
+
+
+    <div id="list">
+    </div>
+
+    <script>
+        var l = document.getElementById("list");
+        var clear = function() {
+            while (l.firstChild) {
+                l.removeChild(l.firstChild);
+            }
+        };
+        var http_request = new XMLHttpRequest();
+        var fetch = function(which, fields) {
+            http_request.open("GET", "http://localhost:3000/" + which + ".json", true);
+            http_request.onreadystatechange = function () {
+                let done = 4, ok = 200;
+                if (http_request.readyState === done && http_request.status === ok) {
+                    clear();
+                    let ol = document.createElement('ol');
+                    l.appendChild(ol);
+                    let jo = JSON.parse(http_request.responseText);
+                    for (i in jo) {
+                        let li = document.createElement('li');
+                        for (f in fields) {
+                            li.textContent += jo[i][fields[f]] + ' ';
+                        }
+                        ol.appendChild(li);
+                    }
+                }
+            }
+            http_request.send (null);
+        };
+    </script>
     <%= link_to "Factories", factories_path, :class => "button btn" %>
     <%= link_to "Cars", cars_path, :class => "button btn" %>
     <%= link_to "Parts", parts_path, :class => "button btn" %>

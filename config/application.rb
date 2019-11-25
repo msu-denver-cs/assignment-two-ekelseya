@@ -8,6 +8,12 @@ Bundler.require(*Rails.groups)
 
 module AssignmentOneEkelseya
   class Application < Rails::Application
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'localhost:3000'
+        resource '*', headers: :any, methods: :any
+      end
+    end
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
     config.assets.precompile += %w( *.svg *.eot *.woff *.ttf )
     # Initialize configuration defaults for originally generated Rails version.
@@ -18,4 +24,5 @@ module AssignmentOneEkelseya
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+
 end
