@@ -11,12 +11,14 @@
     <h1>Welcome to Eryn's Ugly Car Parts!</h1>
     <p>Here you will find only the finest parts for the ugliest cars and the ugliest parts for the finest cars.</p>
     <br>
+    <p>This is an example of a Single Page Application in Ruby on Rails.</p>
+    <br>
     <%= image_tag("uglycar.jpg", :alt => "Orange car by Christopher Ziemnowicz", :size => '260x180') %>
     <br>
     <br>
-    <button onclick="fetch('cars', ['make', 'model'])">Cars</button>
-    <button onclick="fetch('factories', ['name', 'location'])">Factories</button>
-    <button onclick="fetch('parts', ['name', 'quantity'])">Parts</button>
+    <button onclick="fetch('cars', ['make', 'model'])" class="button btn">Cars</button>
+    <button onclick="fetch('factories', ['name', 'location'])" class="button btn">Factories</button>
+    <button onclick="fetch('parts', ['name', 'quantity'])" class="button btn">Parts</button>
 
 
     <div id="list">
@@ -51,9 +53,9 @@
             http_request.send (null);
         };
     </script>
-    <%= link_to "Factories", factories_path, :class => "button btn" %>
-    <%= link_to "Cars", cars_path, :class => "button btn" %>
-    <%= link_to "Parts", parts_path, :class => "button btn" %>
+<!--    <%#= link_to "Factories", factories_path, :class => "button btn" %>
+    <%#= link_to "Cars", cars_path, :class => "button btn" %>
+    <%#= link_to "Parts", parts_path, :class => "button btn" %>-->
 
 </body>
 
